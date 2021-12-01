@@ -7,6 +7,8 @@ class CommentSerializer(serializers.ModelSerializer):
         fields = ['commentId', 'parentId', 'body', 'likes', 'dislikes']   
 class BackendSerializer(serializers.ModelSerializer):
     class Meta:
+        
+        # will not post
         model = BackendData
         fields = ['videoId', 'likes', 'dislikes', 'comments']
         
